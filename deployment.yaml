@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $\{projectName\}-deployment
+spec:
+  selector:
+    matchLabels:
+      app: $\{projectName\}
+  replicas: 1
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      labels:
+        app: $\{projectName\}
+    spec:
+      containers:
+      - name: $\{projectName\}
+        image: iad.ocir.io/$\{tenancy\}/$\{projectName\}-image:$\{version\}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: http
