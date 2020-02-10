@@ -5,4 +5,4 @@ Here I modify the text file.
 blah-blah
 mai punem niste text
 
-eu sunt $env
+eu sunt $ENV
