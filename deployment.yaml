@@ -5,17 +5,17 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: $\{projectName\}
+      app: ProjectName
   replicas: 1
   revisionHistoryLimit: 1
   template:
     metadata:
       labels:
-        app: $\{projectName\}
+        app: ProjectName
     spec:
       containers:
-      - name: $\{projectName\}
-        image: iad.ocir.io/$\{tenancy\}/$\{projectName\}-image:$\{version\}
+      - name: ProjectName
+        image: iad.ocir.io\Tenancy\ProjectName-image:VersionTag
         imagePullPolicy: Always
         ports:
         - containerPort: 80
