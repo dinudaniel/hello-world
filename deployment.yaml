@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ProjectName
-        image: iad.ocir.io\Tenancy\ProjectName-image:VersionTag
+        image: iad.ocir.io\sc30001\ProjectName-image:VersionTag
         imagePullPolicy: Always
         ports:
         - containerPort: 80
