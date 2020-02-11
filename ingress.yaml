@@ -11,6 +11,6 @@ spec:
       paths:
       - path: /ProjectName
         backend:
-            serviceName: ProjectName
+            serviceName: ProjectName-clusterip
             servicePort: 8088
 
