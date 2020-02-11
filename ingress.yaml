@@ -5,14 +5,12 @@ metadata:
   namespace: default
 spec:
   tls:
-    - hosts:
-        - ProjectName.oraclepaas.com
-      secretName: tls-secret-new
+  - secretName: tls-secret
   rules:
-    - host: ProjectName.oraclepaas.com
-      http:
-        paths:
-          - backend:
-              serviceName: ProjectName-clusterip
-              servicePort: 8088
-            path: /
+  - http:
+      paths:
+      - path: /ProjectName
+        backend:
+            serviceName: ProjectName
+            servicePort: 8088
+
