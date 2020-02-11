@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: $\{projectName\}-ingress
+  name: ProjectName-ingress
   namespace: default
 spec:
   tls:
     - hosts:
-        - $\{projectName\}.oraclepaas.com
+        - ProjectName.oraclepaas.com
       secretName: oraclepaas-tls-secret
   rules:
-    - host: $\{projectName\}.oraclepaas.com
+    - host: ProjectName.oraclepaas.com
       http:
         paths:
           - backend:
-              serviceName: $\{projectName\}-clusterip
+              serviceName: ProjectName-clusterip
               servicePort: 8088
             path: /
