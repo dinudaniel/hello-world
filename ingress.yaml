@@ -7,7 +7,7 @@ spec:
   tls:
     - hosts:
         - ProjectName.oraclepaas.com
-      secretName: oraclepaas-tls-secret
+      secretName: tls-secret-new
   rules:
     - host: ProjectName.oraclepaas.com
       http:
