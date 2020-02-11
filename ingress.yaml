@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: ProjectName-ingress
   namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   tls:
   - secretName: tls-secret
